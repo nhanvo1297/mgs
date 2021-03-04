@@ -1,4 +1,5 @@
 # Max Garzon Sucks
+![the man himself](https://www.memphis.edu/cs/images/people/garzon.jpg)
 ### He literally is the _worst_
 
 
