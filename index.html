@@ -39,6 +39,8 @@
 
 <script>
   document.getElementById("him").addEventListener("click", function () {
+        document.getElementById("toot").pause();
+        document.getElementById("toot").currentTime = 0;
     document.getElementById("toot").play();
   });
 </script>
