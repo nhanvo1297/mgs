@@ -37,6 +37,53 @@
         margin-bottom: 2em;
         background-color: white;
       }
+      .container {
+  background: #fafafa;
+  height: 10px;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+.text {
+  margin: 2em auto;
+}
+.bar-container {
+  background: #f0f0f0;
+  height: 10px;
+  width: 100%;
+  border-radius: 10px;
+}
+.bar {
+  background: #00F260;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 10px;
+  width: 0%;
+  border-radius: 10px;
+  transition: width 400ms;
+}
+.btn {
+  outline: none;
+  margin: 2em auto;
+  border: none;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  padding: 1em;
+background: #11998e;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #fff;
+  box-shadow: 0 10px 10px 0 rgba(0,0,0,0.30);
+  cursor: pointer;
+  transition: transform 400ms;
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+  text-align: center;
+}
+.btn:hover {
+  transform: translateY(-10px);
+}
 </style>
 
     <div class="background">
@@ -46,6 +93,44 @@
 <h1>Max Garzon Sucks</h1>
 <img id="him" src="https://www.memphis.edu/cs/images/people/garzon.jpg">
 <h3>He literally is the <i>worst</i></h3>
+
+<h2>Help Garzon poop</h2>
+<!-- Text -->
+<div class="text" id="text">0%</div>
+<!-- End Of Text -->
+
+<!-- Container -->
+<div class="container">
+    <div class="bar-container">
+      <div class="bar" id="bar"></div>
+    </div>
+ <div>
+<!-- End Of Container -->
+   
+<!--  Button   -->
+<button class="btn" type="button" id="btn">+1</button>
+<!--   End Of Button  -->
+<script>
+  var btn = document.getElementById('btn');
+  var bar = document.getElementById('bar');
+  var txt = document.getElementById('text');
+  var count = 0;
+// Listen for an event on the button
+// Increase the width of the bar by 10 percent(10%)
+btn.addEventListener('click', ()=>{
+  bar.style.width = count + '%';
+  txt.innerHTML = count + '%';
+  if(count === 100){
+    document.getElementById("toot").pause();
+    document.getElementById("toot").currentTime = 0;
+    document.getElementById("toot").play();
+    count = 0;  
+  }
+  else {
+      count = count + 1;
+  }
+});
+</script>
 
 
 <h2>Learning is Fun</h2>
